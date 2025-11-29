@@ -1,4 +1,32 @@
-/* Index CSS for OmniCalc */
-/* Using Tailwind CDN for styling, this file is for any additional custom styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Additional custom styles can be added here if needed */
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+/* Utilities */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
